@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EE0B2AE2B07A2D100AB082C /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0B2AD2B07A2D100AB082C /* loginVC.swift */; };
+		8EE0B2B22B07A88800AB082C /* loadingScreenAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0B2B12B07A88800AB082C /* loadingScreenAnim.json */; };
 		8EE43E4D2B01CA6D005E3C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */; };
 		8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E4E2B01CA6D005E3C80 /* SceneDelegate.swift */; };
 		8EE43E542B01CA6D005E3C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE43E522B01CA6D005E3C80 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		3965679485D32E188166BF09 /* Pods-PebblePulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.release.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.release.xcconfig"; sourceTree = "<group>"; };
 		53864030EF8F6F3CEAFB5140 /* Pods_PebblePulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PebblePulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EE0B2AD2B07A2D100AB082C /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
+		8EE0B2B12B07A88800AB082C /* loadingScreenAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingScreenAnim.json; sourceTree = "<group>"; };
 		8EE43E492B01CA6D005E3C80 /* PebblePulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebblePulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EE43E4E2B01CA6D005E3C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		8EE43E4B2B01CA6D005E3C80 /* PebblePulse */ = {
 			isa = PBXGroup;
 			children = (
+				8EE0B2B12B07A88800AB082C /* loadingScreenAnim.json */,
 				8EE472992B0764D9001EA710 /* moneyFalling.json */,
 				8EE472972B075BD5001EA710 /* GoogleService-Info.plist */,
 				8EE472932B07380F001EA710 /* onboardingAnimation.json */,
@@ -93,6 +98,7 @@
 				8EE43E622B01E531005E3C80 /* onboardingHome.swift */,
 				8EE4729B2B0764F8001EA710 /* registerViewController.swift */,
 				8EE4729D2B077788001EA710 /* createUserVC.swift */,
+				8EE0B2AD2B07A2D100AB082C /* loginVC.swift */,
 			);
 			path = PebblePulse;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 				8EE472942B07380F001EA710 /* onboardingAnimation.json in Resources */,
 				8EE4729A2B0764DA001EA710 /* moneyFalling.json in Resources */,
 				8EE472982B075BD5001EA710 /* GoogleService-Info.plist in Resources */,
+				8EE0B2B22B07A88800AB082C /* loadingScreenAnim.json in Resources */,
 				8EE43E562B01CA72005E3C80 /* Assets.xcassets in Resources */,
 				8EE43E542B01CA6D005E3C80 /* Main.storyboard in Resources */,
 			);
@@ -228,6 +235,7 @@
 				8EE4729E2B077788001EA710 /* createUserVC.swift in Sources */,
 				8EE43E632B01E531005E3C80 /* onboardingHome.swift in Sources */,
 				8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */,
+				8EE0B2AE2B07A2D100AB082C /* loginVC.swift in Sources */,
 				8EE4729C2B0764F8001EA710 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
