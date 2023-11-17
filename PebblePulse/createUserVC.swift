@@ -12,6 +12,7 @@ import FirebaseAuth
 import CryptoKit
 import LocalAuthentication
 import AppTrackingTransparency
+import Lottie
 
 
 
@@ -25,8 +26,13 @@ class createUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var termsCheckbox: UIButton!
 
+    @IBOutlet weak var animViewSignUp: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        animViewSignUp.contentMode = .scaleAspectFit
+        animViewSignUp.loopMode = .loop
+        animViewSignUp.animationSpeed = 0.8
+        animViewSignUp.play()
         setupTextField()
         registerButton.isEnabled = false
         termsCheckbox.isSelected = false

@@ -242,6 +242,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ite-Fs-oOj" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="moneyFalling"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-i0-ZXN">
                                 <rect key="frame" x="33" y="122.66666666666669" width="330" height="34"/>
                                 <constraints>
@@ -253,7 +260,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n65-zl-rwR">
-                                <rect key="frame" x="32" y="180" width="331" height="34"/>
+                                <rect key="frame" x="32" y="179.66666666666666" width="331" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="CC2-j8-fs3"/>
                                     <constraint firstAttribute="width" constant="331" id="qff-rY-tYs"/>
@@ -291,6 +298,16 @@
                                 </constraints>
                                 <color key="progressTintColor" red="0.75203052719999997" green="1" blue="0.77327676810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have read and agree to both PennyPulse's and Plaids ToS." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-lv-Tf9">
+                                <rect key="frame" x="30" y="261" width="227" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="3Tc-Dr-hBR"/>
+                                    <constraint firstAttribute="width" constant="227" id="wU7-ja-3JE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W5" family="Hiragino Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVB-Du-CV8">
                                 <rect key="frame" x="321" y="263" width="49" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -315,16 +332,6 @@
                                     <action selector="registerButtonTapped:" destination="RkL-ud-eXd" eventType="touchUpInside" id="156-7k-Veh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have read and agree to both PennyPulse's and Plaids ToS." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-lv-Tf9">
-                                <rect key="frame" x="30" y="261" width="227" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="3Tc-Dr-hBR"/>
-                                    <constraint firstAttribute="width" constant="227" id="wU7-ja-3JE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W5" family="Hiragino Sans" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mlX-fs-le0"/>
                         <color key="backgroundColor" red="0.93016966164482129" green="0.9668344704124695" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -333,11 +340,14 @@
                             <constraint firstItem="mlX-fs-le0" firstAttribute="trailing" secondItem="kQ3-MS-C9Y" secondAttribute="trailing" constant="26" id="5W4-tZ-BpW"/>
                             <constraint firstItem="Pxk-Ca-sl3" firstAttribute="top" secondItem="fRO-lv-Tf9" secondAttribute="bottom" constant="10" id="7Td-7N-1i4"/>
                             <constraint firstItem="kQ3-MS-C9Y" firstAttribute="top" secondItem="n65-zl-rwR" secondAttribute="bottom" constant="35.333333333333343" id="8ui-ys-PdT"/>
+                            <constraint firstItem="ite-Fs-oOj" firstAttribute="leading" secondItem="mlX-fs-le0" secondAttribute="leading" id="9XC-jz-gLC"/>
                             <constraint firstItem="8t8-yT-di7" firstAttribute="leading" secondItem="n65-zl-rwR" secondAttribute="leading" id="AMw-yM-hsy"/>
+                            <constraint firstItem="mlX-fs-le0" firstAttribute="bottom" secondItem="ite-Fs-oOj" secondAttribute="bottom" constant="-34" id="B6g-dt-AFx"/>
                             <constraint firstItem="EVB-Du-CV8" firstAttribute="top" secondItem="kQ3-MS-C9Y" secondAttribute="bottom" constant="10" id="Eej-Rw-4a3"/>
                             <constraint firstItem="Hcw-x9-5PQ" firstAttribute="top" secondItem="mlX-fs-le0" secondAttribute="top" constant="12" id="Hcd-Ih-3na"/>
                             <constraint firstItem="mlX-fs-le0" firstAttribute="trailing" secondItem="n65-zl-rwR" secondAttribute="trailing" constant="30" id="YLL-nj-LBO"/>
                             <constraint firstItem="8t8-yT-di7" firstAttribute="leading" secondItem="mlX-fs-le0" secondAttribute="leading" constant="32" id="Yl5-iP-DuW"/>
+                            <constraint firstItem="ite-Fs-oOj" firstAttribute="top" secondItem="MLu-CI-UdU" secondAttribute="topMargin" constant="-59" id="Z87-0W-xd8"/>
                             <constraint firstItem="fRO-lv-Tf9" firstAttribute="centerY" secondItem="EVB-Du-CV8" secondAttribute="centerY" constant="7" id="bfv-wR-hPH"/>
                             <constraint firstItem="8t8-yT-di7" firstAttribute="centerY" secondItem="Hcw-x9-5PQ" secondAttribute="centerY" id="dTv-wb-nyo"/>
                             <constraint firstItem="n65-zl-rwR" firstAttribute="top" secondItem="Dpb-i0-ZXN" secondAttribute="bottom" constant="22.999999999999972" id="hsI-nc-09x"/>
@@ -347,6 +357,7 @@
                             <constraint firstItem="Dpb-i0-ZXN" firstAttribute="leading" secondItem="mlX-fs-le0" secondAttribute="leading" constant="33" id="lkQ-WJ-UQ0"/>
                             <constraint firstItem="kQ3-MS-C9Y" firstAttribute="leading" secondItem="fRO-lv-Tf9" secondAttribute="leading" id="nAV-rv-7S0"/>
                             <constraint firstItem="Hcw-x9-5PQ" firstAttribute="trailing" secondItem="Dpb-i0-ZXN" secondAttribute="trailing" id="q7v-yB-HTl"/>
+                            <constraint firstItem="ite-Fs-oOj" firstAttribute="centerX" secondItem="MLu-CI-UdU" secondAttribute="centerX" id="qSE-CN-iK0"/>
                             <constraint firstItem="mlX-fs-le0" firstAttribute="trailing" secondItem="Pxk-Ca-sl3" secondAttribute="trailing" constant="26" id="smB-By-hnj"/>
                             <constraint firstItem="Dpb-i0-ZXN" firstAttribute="top" secondItem="Hcw-x9-5PQ" secondAttribute="bottom" constant="20.666666666666686" id="suB-wH-cS8"/>
                             <constraint firstItem="Hcw-x9-5PQ" firstAttribute="centerX" secondItem="EVB-Du-CV8" secondAttribute="centerX" id="tXC-z5-Jb3"/>
@@ -355,6 +366,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animViewSignUp" destination="ite-Fs-oOj" id="cpJ-np-adl"/>
                         <outlet property="emailField" destination="Dpb-i0-ZXN" id="Qrw-Io-U3P"/>
                         <outlet property="passwordField" destination="n65-zl-rwR" id="zb9-4w-aIM"/>
                         <outlet property="passwordStrengthIndicator" destination="kQ3-MS-C9Y" id="KDs-Mx-BPR"/>
@@ -364,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6PB-3Y-7l5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3383.969465648855" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="3284.7328244274809" y="-108.45070422535211"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEh-7S-H9Z">
