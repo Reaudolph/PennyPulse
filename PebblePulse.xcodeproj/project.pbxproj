@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		8EE43E4D2B01CA6D005E3C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */; };
 		8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E4E2B01CA6D005E3C80 /* SceneDelegate.swift */; };
-		8EE43E512B01CA6D005E3C80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E502B01CA6D005E3C80 /* ViewController.swift */; };
 		8EE43E542B01CA6D005E3C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE43E522B01CA6D005E3C80 /* Main.storyboard */; };
 		8EE43E562B01CA72005E3C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE43E552B01CA72005E3C80 /* Assets.xcassets */; };
 		8EE43E592B01CA72005E3C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE43E572B01CA72005E3C80 /* LaunchScreen.storyboard */; };
+		8EE43E632B01E531005E3C80 /* onboardingHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E622B01E531005E3C80 /* onboardingHome.swift */; };
+		8EE472942B07380F001EA710 /* onboardingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EE472932B07380F001EA710 /* onboardingAnimation.json */; };
+		8EE472982B075BD5001EA710 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EE472972B075BD5001EA710 /* GoogleService-Info.plist */; };
+		8EE4729A2B0764DA001EA710 /* moneyFalling.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EE472992B0764D9001EA710 /* moneyFalling.json */; };
+		8EE4729C2B0764F8001EA710 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4729B2B0764F8001EA710 /* registerViewController.swift */; };
+		8EE4729E2B077788001EA710 /* createUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4729D2B077788001EA710 /* createUserVC.swift */; };
+		E8371F0CA84C40BA4D453EF3 /* Pods_PebblePulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53864030EF8F6F3CEAFB5140 /* Pods_PebblePulse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3965679485D32E188166BF09 /* Pods-PebblePulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.release.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.release.xcconfig"; sourceTree = "<group>"; };
+		53864030EF8F6F3CEAFB5140 /* Pods_PebblePulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PebblePulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE43E492B01CA6D005E3C80 /* PebblePulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebblePulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EE43E4E2B01CA6D005E3C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8EE43E502B01CA6D005E3C80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EE43E532B01CA6D005E3C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EE43E552B01CA72005E3C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EE43E582B01CA72005E3C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EE43E5A2B01CA72005E3C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EE43E622B01E531005E3C80 /* onboardingHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingHome.swift; sourceTree = "<group>"; };
+		8EE472932B07380F001EA710 /* onboardingAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboardingAnimation.json; sourceTree = "<group>"; };
+		8EE472972B075BD5001EA710 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EE472992B0764D9001EA710 /* moneyFalling.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moneyFalling.json; sourceTree = "<group>"; };
+		8EE4729B2B0764F8001EA710 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		8EE4729D2B077788001EA710 /* createUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createUserVC.swift; sourceTree = "<group>"; };
+		C55A44ADE4E89E4043C05462 /* Pods-PebblePulse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.debug.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8371F0CA84C40BA4D453EF3 /* Pods_PebblePulse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B9805741CAE978054E05AAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53864030EF8F6F3CEAFB5140 /* Pods_PebblePulse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EE43E402B01CA6D005E3C80 = {
 			isa = PBXGroup;
 			children = (
 				8EE43E4B2B01CA6D005E3C80 /* PebblePulse */,
 				8EE43E4A2B01CA6D005E3C80 /* Products */,
+				CA9F0D59D21A4C8A00B18380 /* Pods */,
+				2B9805741CAE978054E05AAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,29 @@
 		8EE43E4B2B01CA6D005E3C80 /* PebblePulse */ = {
 			isa = PBXGroup;
 			children = (
+				8EE472992B0764D9001EA710 /* moneyFalling.json */,
+				8EE472972B075BD5001EA710 /* GoogleService-Info.plist */,
+				8EE472932B07380F001EA710 /* onboardingAnimation.json */,
 				8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */,
 				8EE43E4E2B01CA6D005E3C80 /* SceneDelegate.swift */,
-				8EE43E502B01CA6D005E3C80 /* ViewController.swift */,
 				8EE43E522B01CA6D005E3C80 /* Main.storyboard */,
 				8EE43E552B01CA72005E3C80 /* Assets.xcassets */,
 				8EE43E572B01CA72005E3C80 /* LaunchScreen.storyboard */,
 				8EE43E5A2B01CA72005E3C80 /* Info.plist */,
+				8EE43E622B01E531005E3C80 /* onboardingHome.swift */,
+				8EE4729B2B0764F8001EA710 /* registerViewController.swift */,
+				8EE4729D2B077788001EA710 /* createUserVC.swift */,
 			);
 			path = PebblePulse;
+			sourceTree = "<group>";
+		};
+		CA9F0D59D21A4C8A00B18380 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C55A44ADE4E89E4043C05462 /* Pods-PebblePulse.debug.xcconfig */,
+				3965679485D32E188166BF09 /* Pods-PebblePulse.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EE43E5D2B01CA72005E3C80 /* Build configuration list for PBXNativeTarget "PebblePulse" */;
 			buildPhases = (
+				27D5F902D58193E940590A48 /* [CP] Check Pods Manifest.lock */,
 				8EE43E452B01CA6D005E3C80 /* Sources */,
 				8EE43E462B01CA6D005E3C80 /* Frameworks */,
 				8EE43E472B01CA6D005E3C80 /* Resources */,
+				8C5E8F5249C64D023D51D777 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EE43E592B01CA72005E3C80 /* LaunchScreen.storyboard in Resources */,
+				8EE472942B07380F001EA710 /* onboardingAnimation.json in Resources */,
+				8EE4729A2B0764DA001EA710 /* moneyFalling.json in Resources */,
+				8EE472982B075BD5001EA710 /* GoogleService-Info.plist in Resources */,
 				8EE43E562B01CA72005E3C80 /* Assets.xcassets in Resources */,
 				8EE43E542B01CA6D005E3C80 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +177,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27D5F902D58193E940590A48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PebblePulse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C5E8F5249C64D023D51D777 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PebblePulse/Pods-PebblePulse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PebblePulse/Pods-PebblePulse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PebblePulse/Pods-PebblePulse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8EE43E452B01CA6D005E3C80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE43E512B01CA6D005E3C80 /* ViewController.swift in Sources */,
 				8EE43E4D2B01CA6D005E3C80 /* AppDelegate.swift in Sources */,
+				8EE4729E2B077788001EA710 /* createUserVC.swift in Sources */,
+				8EE43E632B01E531005E3C80 /* onboardingHome.swift in Sources */,
 				8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */,
+				8EE4729C2B0764F8001EA710 /* registerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +375,17 @@
 		};
 		8EE43E5E2B01CA72005E3C80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55A44ADE4E89E4043C05462 /* Pods-PebblePulse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWL3D757C2;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PebblePulse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PennyPulse;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zennobear.PebblePulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zennobear.PennyPulse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,14 +406,17 @@
 		};
 		8EE43E5F2B01CA72005E3C80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3965679485D32E188166BF09 /* Pods-PebblePulse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VWL3D757C2;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PebblePulse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PennyPulse;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zennobear.PebblePulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zennobear.PennyPulse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

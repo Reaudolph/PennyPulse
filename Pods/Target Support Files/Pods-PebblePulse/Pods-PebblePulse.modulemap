@@ -1,0 +1,6 @@
+framework module Pods_PebblePulse {
+  umbrella header "Pods-PebblePulse-umbrella.h"
+
+  export *
+  module * { export * }
+}
