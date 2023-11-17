@@ -137,6 +137,7 @@ class createUserVC: UIViewController, UITextFieldDelegate {
         validateInputs()
     }
 
+    
     @IBAction func dismissModal(_ sender: Any) {
         self.resignFirstResponder()
         self.dismiss(animated: true)

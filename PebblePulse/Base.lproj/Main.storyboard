@@ -83,7 +83,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="onboardingAnimation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-eo-q0W">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-eo-q0W">
                                 <rect key="frame" x="41" y="752" width="314" height="47"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get Started">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O13-i6-zyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506.1068702290077" y="9.8591549295774659"/>
+            <point key="canvasLocation" x="1653" y="740"/>
         </scene>
         <!--Create UserVC-->
         <scene sceneID="BWs-AD-Zmo">
@@ -243,6 +243,7 @@
                             <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ite-Fs-oOj" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="moneyFalling"/>
                                 </userDefinedRuntimeAttributes>
@@ -277,7 +278,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcw-x9-5PQ">
                                 <rect key="frame" x="328" y="71" width="35" height="31"/>
-                                <color key="tintColor" name="PennyGreen"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="X">
                                     <backgroundConfiguration key="background" image="xmark.app.fill" catalog="system">
@@ -285,6 +286,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="dismissModal:" destination="RkL-ud-eXd" eventType="touchUpInside" id="bbL-tY-S7O"/>
+                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kQ3-MS-C9Y">
                                 <rect key="frame" x="30" y="249" width="337" height="4"/>
@@ -321,7 +325,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="PennyGreen"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="RkL-ud-eXd" eventType="touchUpInside" id="99u-ep-DoR"/>
@@ -329,7 +333,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mlX-fs-le0"/>
-                        <color key="backgroundColor" red="0.93016966164482129" green="0.9668344704124695" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="PennyGreen"/>
                         <constraints>
                             <constraint firstItem="8t8-yT-di7" firstAttribute="top" secondItem="mlX-fs-le0" secondAttribute="top" constant="13" id="0FS-Lj-rrC"/>
                             <constraint firstItem="mlX-fs-le0" firstAttribute="trailing" secondItem="kQ3-MS-C9Y" secondAttribute="trailing" constant="26" id="5W4-tZ-BpW"/>
@@ -371,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6PB-3Y-7l5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="-665"/>
+            <point key="canvasLocation" x="3315" y="739"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="afb-3o-Hdb">
@@ -405,7 +409,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5o-TL-8xK" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="31" y="143" width="339" height="412"/>
+                                <rect key="frame" x="31" y="94" width="374" height="461"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="onboardingAnimation"/>
@@ -436,7 +440,7 @@
                         <viewLayoutGuide key="safeArea" id="Y60-og-VBX"/>
                         <color key="backgroundColor" name="PennyGreen"/>
                         <constraints>
-                            <constraint firstItem="U5o-TL-8xK" firstAttribute="top" secondItem="Y60-og-VBX" secondAttribute="top" constant="40" id="4S0-QP-YCq"/>
+                            <constraint firstItem="U5o-TL-8xK" firstAttribute="top" secondItem="Y60-og-VBX" secondAttribute="top" constant="-9" id="4S0-QP-YCq"/>
                             <constraint firstItem="pRW-Ji-rra" firstAttribute="top" secondItem="2G1-MM-PD9" secondAttribute="bottom" constant="18" id="77G-s7-9eQ"/>
                             <constraint firstItem="iga-sV-8WW" firstAttribute="trailing" secondItem="pRW-Ji-rra" secondAttribute="trailing" id="Ale-vS-mWp"/>
                             <constraint firstItem="iga-sV-8WW" firstAttribute="centerX" secondItem="2G1-MM-PD9" secondAttribute="centerX" id="GXV-5m-Bx9"/>
@@ -445,7 +449,7 @@
                             <constraint firstItem="U5o-TL-8xK" firstAttribute="leading" secondItem="Y60-og-VBX" secondAttribute="leading" constant="31" id="dnr-2j-BpB"/>
                             <constraint firstItem="iga-sV-8WW" firstAttribute="leading" secondItem="2G1-MM-PD9" secondAttribute="leading" id="eHp-Ct-XIf"/>
                             <constraint firstItem="iga-sV-8WW" firstAttribute="top" secondItem="dpI-DO-oi8" secondAttribute="bottom" constant="18" id="g9G-6d-f4h"/>
-                            <constraint firstItem="U5o-TL-8xK" firstAttribute="centerX" secondItem="Dgv-Yw-0T6" secondAttribute="centerX" constant="4" id="gKo-fr-ANL"/>
+                            <constraint firstItem="U5o-TL-8xK" firstAttribute="centerX" secondItem="Dgv-Yw-0T6" secondAttribute="centerX" constant="21.5" id="gKo-fr-ANL"/>
                             <constraint firstItem="Y60-og-VBX" firstAttribute="trailing" secondItem="dpI-DO-oi8" secondAttribute="trailing" constant="28" id="h19-LU-1Ef"/>
                             <constraint firstItem="Y60-og-VBX" firstAttribute="bottom" secondItem="pRW-Ji-rra" secondAttribute="bottom" constant="23" id="rWH-aU-Eng"/>
                             <constraint firstItem="dpI-DO-oi8" firstAttribute="trailing" secondItem="iga-sV-8WW" secondAttribute="trailing" constant="1" id="sCr-QD-uwQ"/>
@@ -461,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ou1-4n-lrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3258.7786259541986" y="9.8591549295774659"/>
+            <point key="canvasLocation" x="2510.6870229007632" y="738.73239436619724"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BEh-7S-H9Z">
@@ -482,12 +486,6 @@
             <point key="canvasLocation" x="725.95419847328242" y="3.5211267605633805"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="PyP-6h-LNC"/>
-        <designable name="Ww5-Pm-7to"/>
-        <designable name="f5x-nE-BNt"/>
-        <designable name="ite-Fs-oOj"/>
-    </designables>
     <resources>
         <image name="Logo" width="557.66668701171875" height="557.33331298828125"/>
         <image name="mail.stack.fill" catalog="system" width="126" height="128"/>
@@ -495,7 +493,7 @@
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="xmark.app.fill" catalog="system" width="128" height="114"/>
         <namedColor name="PennyGreen">
-            <color red="0.59607845540000004" green="0.97254902119999997" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.59600001573562622" green="0.97299998998641968" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -508,6 +506,9 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
