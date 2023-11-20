@@ -26,7 +26,8 @@ class registerViewController : UIViewController {
     @IBAction func signUpWithEmail(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signUpVC = storyboard.instantiateViewController(withIdentifier: "createUserVC") as! createUserVC
-        //        signUpVC.runCount = self.runCount
+        signUpVC.delegate = self
+        
         self.nav = UINavigationController(rootViewController: signUpVC)
         if #available(iOS 16.0, *) {
             if let sheets = self.nav.sheetPresentationController {
@@ -48,5 +49,18 @@ class registerViewController : UIViewController {
         self.nav.modalPresentationStyle = .pageSheet
         self.present(self.nav, animated: true, completion: nil)
     }
+
     
+}
+
+extension registerViewController: CreateUserVCDelegate {
+    func userDidSignUpSuccessfully() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = storyboard.instantiateViewController(withIdentifier: "homeScreenVC") as! homeScreenVC
+        if let navigationController = self.navigationController {
+            navigationController.pushViewController(homeVC, animated: true)
+        } else {
+            print("NavigationController not found")
+        }
+    }
 }

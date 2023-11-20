@@ -19,6 +19,7 @@ import Lottie
 
 
 class createUserVC: UIViewController, UITextFieldDelegate {
+    weak var delegate: CreateUserVCDelegate?
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -29,6 +30,8 @@ class createUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var animViewSignUp: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.textColor = .black
+        passwordField.textColor = .black
         animViewSignUp.contentMode = .scaleAspectFit
         animViewSignUp.loopMode = .loop
         animViewSignUp.animationSpeed = 0.8
@@ -93,7 +96,7 @@ class createUserVC: UIViewController, UITextFieldDelegate {
         switch strength {
         case 0..<0.3: color = .red
         case 0.3..<0.6: color = .orange
-        case 0.6...1: color = .green
+        case 0.6...1: color = .blue
         default: color = .red
         }
         passwordStrengthIndicator.progressTintColor = color
@@ -127,8 +130,23 @@ class createUserVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
-        // OWO
+        guard let email = emailField.text, let password = passwordField.text else {
+            // Handle the error if email or password is nil
+            print("Email or Password is nil")
+            return
+        }
+
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+                   if let error = error {
+                       print("Error in creating user: \(error.localizedDescription)")
+                   } else {
+                       print("User created successfully")
+                       self?.delegate?.userDidSignUpSuccessfully()
+                       self?.dismiss(animated: true, completion: nil)
+                   }
+               }
     }
+
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == passwordField {
@@ -144,4 +162,10 @@ class createUserVC: UIViewController, UITextFieldDelegate {
     }
     
 
+}
+
+//actual spagetti but just for rn  fr fr
+
+protocol CreateUserVCDelegate: AnyObject {
+    func userDidSignUpSuccessfully()
 }

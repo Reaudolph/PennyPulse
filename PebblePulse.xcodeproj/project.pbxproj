@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EB33F622B0B799800831DD7 /* homeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB33F612B0B799800831DD7 /* homeScreenVC.swift */; };
 		8EE0B2AE2B07A2D100AB082C /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0B2AD2B07A2D100AB082C /* loginVC.swift */; };
 		8EE0B2B22B07A88800AB082C /* loadingScreenAnim.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EE0B2B12B07A88800AB082C /* loadingScreenAnim.json */; };
 		8EE43E4D2B01CA6D005E3C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE43E4C2B01CA6D005E3C80 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		3965679485D32E188166BF09 /* Pods-PebblePulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.release.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.release.xcconfig"; sourceTree = "<group>"; };
 		53864030EF8F6F3CEAFB5140 /* Pods_PebblePulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PebblePulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB33F612B0B799800831DD7 /* homeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenVC.swift; sourceTree = "<group>"; };
 		8EE0B2AD2B07A2D100AB082C /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		8EE0B2B12B07A88800AB082C /* loadingScreenAnim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingScreenAnim.json; sourceTree = "<group>"; };
 		8EE43E492B01CA6D005E3C80 /* PebblePulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebblePulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				8EE4729B2B0764F8001EA710 /* registerViewController.swift */,
 				8EE4729D2B077788001EA710 /* createUserVC.swift */,
 				8EE0B2AD2B07A2D100AB082C /* loginVC.swift */,
+				8EB33F612B0B799800831DD7 /* homeScreenVC.swift */,
 			);
 			path = PebblePulse;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */,
 				8EE0B2AE2B07A2D100AB082C /* loginVC.swift in Sources */,
 				8EE4729C2B0764F8001EA710 /* registerViewController.swift in Sources */,
+				8EB33F622B0B799800831DD7 /* homeScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
