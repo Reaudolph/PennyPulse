@@ -1,0 +1,1274 @@
+Here are the list of ChatGPT Prompts that I used in order to fix a scrolling issue:
+
+1. My html file has an automatic scrolling issue and I can't seem to fix it. Its supposed to all be on one page. Could you fix it? Thank you. Here is my code for the html file:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+Response: 
+It seems like your HTML code is missing a lot of necessary CSS and JavaScript to provide the functionality you're looking for. However, the automatic scrolling issue might be related to the structure of your HTML document or some missing CSS. I will provide you with a simplified HTML structure that should help resolve the scrolling issue, but please note that you may need to add more CSS and JavaScript for a complete working solution.
+
+Here's the simplified HTML structure:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WellLyfe</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    <!-- Add any other CSS or JavaScript imports you need here -->
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}" class="logo" width="200" height="110"></a></h1>
+        <div class="navigation">
+            <!-- Add your navigation links here -->
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="info">
+                <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that it truly needs!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="content2">
+            <div class="info2">
+                <h3>Join our mailing list!</h3>
+                <!-- Your mailing list form goes here -->
+            </div>
+        </div>
+    </section>
+
+    {% block content %}
+    <!-- Your content block goes here if needed -->
+    {% endblock %}
+
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+</body>
+</html>
+
+Please make sure to add your CSS styles and any additional JavaScript you need to achieve the desired functionality. 
+If you continue to experience scrolling issues, you may want to check your CSS styles for any unwanted scrolling properties, or review any additional 
+JavaScript that might be affecting the scroll behavior.
+
+2. Are there any unwanted scrolling properties in my CSS file:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: rgb(12, 56, 113);
+  font-weight: 600;
+  font-size: medium;
+}
+
+.welllyfeimg {
+  width: 400px;  
+  height: 150px; 
+  position: relative;
+  left: 920px;
+  bottom: 290px;
+}
+
+.content2 {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content2 .info2 .h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: medium;
+}
+
+input[id] {
+  width: 70%;
+  padding: 12px 12px;
+  display: inline-block;
+  margin: 8px, 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 132, 255, 0.753);
+}
+
+#mc_embed_signup {
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
+
+Response: Based on the CSS code you provided, there are a couple of properties that may contribute to unwanted scrolling:
+
+background-attachment: fixed; in the body selector: This property is used to create a fixed background image. 
+While this can be a nice effect for some websites, it can lead to issues if the image's dimensions are larger than the viewport, causing 
+the background to extend beyond the viewport and create a horizontal or vertical scroll. Ensure that your background image dimensions are not larger than the viewport.
+
+bottom: 290px; in the .welllyfeimg selector: This property sets the element's position 290 pixels from the bottom, which could push the content further down,
+ potentially causing a vertical scroll. Make sure that this value is adjusted according to your layout requirements.
+
+width: 600px; in the #mc_embed_signup selector: If the width of an element exceeds the width of the viewport, it can cause a horizontal scroll. 
+Ensure that the width of this element doesn't extend beyond the viewport width.
+
+Check these properties and adjust them as necessary to prevent unwanted scrolling. 
+Additionally, make sure that your content, including images and other elements, is not wider or taller than the viewport to avoid scrolling issues.
+
+3. My html file has an automatic scrolling issue and I can't seem to fix it. Its supposed to all be on one page. Could you fix it? Thank you. Here is my code for the html file, css file and python flask file:
+
+HTML file:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+CSS File:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: rgb(12, 56, 113);
+  font-weight: 600;
+  font-size: medium;
+}
+
+.welllyfeimg {
+  width: 400px;  
+  height: 150px; 
+  position: relative;
+  left: 920px;
+  bottom: 290px;
+}
+
+.content2 {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content2 .info2 .h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: medium;
+}
+
+input[id] {
+  width: 70%;
+  padding: 12px 12px;
+  display: inline-block;
+  margin: 8px, 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 132, 255, 0.753);
+}
+
+#mc_embed_signup {
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
+
+Flask file:
+
+from flask import Flask, render_template, request, session, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/')
+def main():
+    return render_template("welllyfe.html")
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0",debug=True)
+
+Response: Based on the provided code, there doesn't seem to be any obvious issue that would cause automatic scrolling. However, there are a 
+few things you can check and improve to ensure the page displays as expected:
+
+Positioning: In your CSS, you have set the .welllyfeimg position using the position: relative; property. This can cause the element to be positioned 
+relative to its normal position in the document flow. You should be careful with the left and bottom properties as they might affect the page layout and could 
+potentially cause scrolling. You may want to adjust these values to ensure the image doesn't extend beyond the viewport.
+
+For example:
+
+.welllyfeimg {
+    width: 400px;
+    height: 150px;
+    position: absolute; /* Change this to absolute */
+    left: 920px;
+    bottom: 10px; /* Adjust this value as needed */
+}
+
+Background Image: Make sure that your background image (WellLyfe Background Website.jpg) isn't larger than the viewport size, as this could cause unwanted scrolling. 
+You can optimize the image to an appropriate size.
+
+Content Width: Check that your content doesn't exceed the width of the viewport, which can also lead to horizontal scrolling. Ensure that your content and layout 
+are responsive to different screen sizes.
+
+Font Size and Line Height: Large font sizes, particularly in combination with line-height, can push content beyond the viewport, causing vertical scrolling. 
+Make sure that your font sizes and line heights are appropriate for your design.
+
+After making these adjustments, you should test your webpage on various devices and screen sizes to ensure that it displays correctly without any automatic scrolling issues. 
+If the problem persists, please provide more details about the specific behavior or issue you are experiencing, and I can provide further guidance.
+
+4. My html file has an automatic scrolling issue and I can't seem to fix it. Its supposed to all be on one page. The page seems to have a scrollbar and all the elements (that are supposed to fit on one page) seem to scroll in the background. This started happening when I converted the html and css file to Python Flask. Could you fix it? Thank you. Here is my code for the html file, css file and python flask file:
+
+HTML file:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+CSS File:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: rgb(12, 56, 113);
+  font-weight: 600;
+  font-size: medium;
+}
+
+.welllyfeimg {
+  width: 400px;  
+  height: 150px; 
+  position: relative;
+  left: 920px;
+  bottom: 290px;
+}
+
+.content2 {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content2 .info2 .h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: medium;
+}
+
+input[id] {
+  width: 70%;
+  padding: 12px 12px;
+  display: inline-block;
+  margin: 8px, 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 132, 255, 0.753);
+}
+
+#mc_embed_signup {
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
+
+Flask file:
+
+from flask import Flask, render_template, request, session, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/')
+def main():
+    return render_template("welllyfe.html")
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0",debug=True)
+
+Response: Based on the provided code, there don't appear to be any obvious issues that should cause an automatic scrolling problem. 
+However, you can make sure your page behaves as expected by making a few adjustments and taking best practices into account:
+
+Viewport Meta Tag: Ensure that you have a viewport meta tag in the <head> of your HTML file to control the initial zoom level and the width of the viewport. 
+This can help prevent unwanted scrolling on mobile devices.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+Remove Unnecessary Elements: If you have any elements that might extend beyond the viewport or affect scrolling, you should review them carefully. 
+Ensure that elements with absolute positioning or large dimensions don't cause scrolling.
+
+CSS and JavaScript: Make sure that the CSS and JavaScript files you are using (especially those loaded dynamically) do not 
+introduce any conflicts or styling issues that might lead to unexpected scrolling.
+
+Content Width: Verify that your content width doesn't exceed the viewport width, which can cause horizontal scrolling. 
+Your CSS should be designed to adapt to different screen sizes.
+
+Overflow Property: Check for the overflow property in your CSS. It might be set to auto or scroll for specific elements, causing scrollbars to appear. 
+Ensure that you only apply overflow where needed.
+
+Review Flask and Server Configuration: Flask itself should not be causing this issue, but you should ensure that you don't have 
+any server-side code that might be interfering with the rendering of the page.
+
+If the problem persists after checking these items, it's possible that there might be an issue in your Flask application or with the interaction between 
+Flask and your HTML/CSS. In that case, it may be necessary to investigate your server-side code, Flask configuration, or any 
+additional JavaScript or Flask extensions that might be impacting the page's behavior.
+
+The code you provided appears to be correctly structured for a basic web page, and there is no apparent issue with scrolling in the code you've posted. 
+However, the issue you're facing could be related to content outside of the code you've provided or browser-specific behavior.
+
+Here are some steps to diagnose and potentially fix the scrolling issue:
+
+Content Overflow: Check if there's content outside of the code you've posted that might be causing the scrolling issue. 
+Make sure no elements, images, or iframes are extending beyond the visible viewport.
+
+Browser-Specific Issues: Test your page in multiple web browsers to see if the scrolling issue is specific to one browser. 
+Sometimes, different browsers can interpret CSS and HTML slightly differently.
+
+CSS Styles: Review your CSS styles and ensure that no styles (such as margins, padding, or positioning) are causing elements to extend beyond the viewport. 
+You can also try removing or simplifying some styles to see if that resolves the issue.
+
+Overflow Property: Check for CSS properties like overflow: auto or overflow: hidden applied to the body or other elements. These can affect scrolling behavior.
+
+External Content: If you are embedding external content like iframes, make sure they are correctly sized and styled to fit within the viewport.
+
+Browser Developer Tools: Use your browser's developer tools (F12 or right-click and "Inspect" in most browsers) to inspect the DOM and identify which element is causing the scroll. 
+This can help you pinpoint the issue.
+
+Viewport Meta Tag: Ensure that your HTML includes the viewport meta tag in the <head> section. 
+This tag can help control the initial scale and sizing of the page on mobile devices.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+Image and Media Sizes: Check the sizes of your images and media elements to ensure they fit within the viewport.
+If you continue to experience scrolling issues, please provide more specific details about the behavior you're encountering 
+(e.g., the specific browser where the issue occurs, a description of how the scrolling behaves, etc.), and I can provide further guidance based on that information.
+
+5. My html file has an automatic scrolling issue and I can't seem to fix it. Its supposed to all be on one page. The page seems to have a scrollbar and all the elements (that are supposed to fit on one page) seem to scroll in the background. Also when it scrolls it takes a few seconds for all the elements to scroll up and down. This started happening when I converted the html and css file to Python Flask. Could you fix it? Thank you. Here is my code for the html file, css file and python flask file:
+
+HTML file:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+CSS File:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: rgb(12, 56, 113);
+  font-weight: 600;
+  font-size: medium;
+}
+
+.welllyfeimg {
+  width: 400px;  
+  height: 150px; 
+  position: relative;
+  left: 920px;
+  bottom: 290px;
+}
+
+.content2 {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content2 .info2 .h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: medium;
+}
+
+input[id] {
+  width: 70%;
+  padding: 12px 12px;
+  display: inline-block;
+  margin: 8px, 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 132, 255, 0.753);
+}
+
+#mc_embed_signup {
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
+
+Flask file:
+
+from flask import Flask, render_template, request, session, redirect, url_for
+
+app = Flask(__name__)
+
+@app.route('/')
+def main():
+    return render_template("welllyfe.html")
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0",debug=True)
+
+Response: I noticed a few potential issues in your HTML and CSS code that might be causing the scrolling problem and a delay in rendering. 
+Here are some suggestions to help you resolve these issues:
+
+Background Scrolling Issue: To prevent the background from scrolling, you should set the background image for the body element, 
+and not use background-attachment: fixed for the body selector. Update your CSS as follows:
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Add this to reset default margin */
+}
+
+Positioning of Elements: The positioning of elements using position: relative with specific left and bottom values can cause unexpected behavior. 
+Consider using other layout methods, such as Flexbox or Grid, for better control. If these styles are causing the delay you mentioned, 
+removing them should improve the rendering speed.
+
+Input Margin: In your CSS, you have a comma instead of a space in the margin property for input[id]. Replace it with a space:
+
+input[id] {
+    width: 70%;
+    padding: 12px 12px;
+    display: inline-block;
+    margin: 8px 0; /* Replace the comma with a space */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black;
+}
+
+Optimizing CSS: Consider removing any unnecessary or duplicate CSS rules to make your code cleaner and potentially improve page loading times.
+
+After making these changes, your HTML and CSS should look like this:
+
+Updated CSS:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+/* ... Other CSS rules ... */
+
+Make these updates in your CSS and HTML files, and it should help resolve the scrolling issue and improve the rendering speed. 
+If you still encounter problems after making these changes, please provide more details about the issues you are facing.
+
+6. Could you make it where the <h3> element is is closer to <p> element? Here is my html code:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+To make the <h3> element closer to the <p> element, you can modify the CSS to adjust the margin or padding between them. 
+Specifically, you can target the <h3> element and reduce its bottom margin. Here's the updated CSS code to accomplish this:
+
+.info2 h3 {
+  margin-bottom: 10px; /* Adjust the margin as needed to bring the elements closer */
+}
+
+In this example, I've set the bottom margin of the <h3> element to 10px, but you can adjust it to your preference. 
+You can place this CSS code within your existing CSS file to make the adjustment. This change should bring the <h3> element closer to the <p> element in your HTML layout.
+
+To make the <h3> element closer to the <p> element, you can reduce the margin between them. 
+In your HTML code, it appears that the h3 and p elements are inside a div with the class info2. You can add some CSS to reduce the margin between these elements. 
+Here's how you can do it:
+
+.info2 h3 {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+This CSS will reduce the margin below the <h3> element, bringing it closer to the <p> element. You can adjust the 10px value to your preferred spacing.
+
+Here's the updated HTML with the CSS rule:
+
+<section>
+    <div class="content2">
+        <div class="info2">
+            <h3>Join our mailing list!</h3>
+            <div id="mc_embed_shell">
+                <!-- ... (rest of your HTML) ... -->
+            </div>
+        </div>
+    </div>
+</section>
+
+/* Add this CSS rule to your existing stylesheet */
+.info2 h3 {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+This CSS will make the <h3> element closer to the <p> element in your design. You can adjust the margin-bottom value to achieve the desired spacing.
+
+6. I need all the elements on this page to be positioned where it won't scroll. Here are my files:
+
+HTML File:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+CSS File:
+
+To make all the elements on your page not
+
+
+7. I need all the elements on this page to be positioned where it won't scroll. Here are my files:
+
+HTML File:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WellLyfe</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}">
+    </head>
+    <body>
+        <section>
+            <header>
+                <h1><a href="#"><img src="{{url_for('static', filename='WellLyfe Logo finall.png')}}"  class="logo" width="200" height="110"></a></h1>
+                <div class="navigation">
+                </div>
+            </header>
+            <div class="content">
+                <div class="info">
+                    <h2>Empower Your Life<br><span>With WellLyfe!</span></h2>
+                    <p>With WellLyfe, you can empower the quality of your life by making better decisions, financial habits, and improve your mental health. With features
+                        such as mood tracking, expense monitoring, goal setting & progress tracking and more, WellLyfe provides the tools to give your life the boost that
+                        it truly needs!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="content2">
+                <div class="info2">
+                    <h3>Join our mailing list!</h3>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://gmail.us12.list-manage.com/subscribe/post?u=5faa533c5b0cf6de68a5056b6&amp;id=2c0768258a&amp;f_id=00bb47e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                          <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
+                              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                          <div id="mce-responses" class="clear foot">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                          </div>
+                      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                          <input type="text" name="b_5faa533c5b0cf6de68a5056b6_2c0768258a" tabindex="-1" value="">
+                      </div>
+                          <div class="optionalParent">
+                              <div class="clear foot">
+                                  <input type="submit" name="join" id="mc-embedded-subscribe" class="button" value="Join">
+                                  <p style="margin: 0px auto;"><a href="http://eepurl.com/iBOMkg" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
+                    </div>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
+                    </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+    <img class="welllyfeimg" src="{{url_for('static', filename='WellLyfe Heading.png')}}">
+    </body>
+</html>
+
+CSS File:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+  body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Add this to reset default margin */
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.content {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content .info h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: rgb(12, 56, 113);
+  font-weight: 600;
+  font-size: medium;
+}
+
+.welllyfeimg {
+  width: 400px;
+  height: 150px;
+  position: absolute; /* Change this to absolute */
+  left: 920px;
+  bottom: 10px; /* Adjust this value as needed */
+}
+
+
+.content2 {
+  max-width: 650px;
+  margin: 60px 100px;
+}
+
+.content2 .info2 .h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: medium;
+}
+
+input[id] {
+  width: 70%;
+  padding: 12px 12px;
+  display: inline-block;
+  margin: 8px 0; /* Replace the comma with a space */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+
+input[type=submit] {
+  width: 40%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(0, 132, 255, 0.753);
+}
+
+#mc_embed_signup {
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
+
+.info2 h3 {
+  margin-bottom: 10px; /* Adjust the margin as needed to bring the elements closer */
+}
+
+Response: To make all the elements on your page positioned where they won't scroll, you can modify your CSS. 
+You've already set the position property to absolute for the .welllyfeimg class, which is good for this purpose. 
+However, you need to adjust the positioning for other elements as well. Here's the modified CSS:
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-image: url("/static/WellLyfe Background Website.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Add this to reset default margin */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+section {
+    position: relative; /* Create a stacking context for child elements */
+}
+
+header {
+    position: fixed; /* Fixed position to prevent scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensures it's on top */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for header */
+}
+
+.content {
+    max-width: 650px;
+    margin: 60px auto; /* Center content */
+    padding-top: 150px; /* Adjust this value to account for the fixed header */
+}
+
+.welllyfeimg {
+    width: 400px;
+    height: 150px;
+    position: fixed; /* Fixed position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    bottom: 10px;
+    z-index: 1; /* Behind the header */
+}
+
+.content2 {
+    max-width: 650px;
+    margin: 60px auto; /* Center content */
+    padding-top: 150px; /* Adjust this value to account for the fixed header */
+}
+
+/* The rest of your CSS remains the same */
+
+In this CSS, I've made the following changes:
+
+Applied position: fixed to the header to keep it at the top and prevent scrolling.
+Added a semi-transparent background to the header for a better visual effect.
+Adjusted the positioning of the .welllyfeimg to be centered horizontally and fixed to the bottom.
+Added overflow: hidden to the body to prevent scrolling on the page.
+These changes should help you achieve the desired layout where the header and image won't scroll, and the rest of the content will scroll as needed. 
+Adjust the padding-top values in the .content and .content2 classes to ensure the content is not hidden behind the fixed header and image.
