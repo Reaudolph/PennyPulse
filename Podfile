@@ -8,6 +8,5 @@ target 'PebblePulse' do
   # Pods for PebblePulse
 	pod 'FirebaseAuth'
   pod 'lottie-ios'
-
-
+  pod 'FirebaseFirestore'
 end

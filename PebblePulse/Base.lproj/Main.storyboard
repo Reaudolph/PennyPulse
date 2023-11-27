@@ -167,13 +167,6 @@
                                     <constraint firstAttribute="height" constant="33.333333333333371" id="lp9-2j-m80"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-Pm-7to" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="50" y="153" width="327" height="347"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loadingScreenAnim"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PennyPulse will let your see through your emotions. See your expenditures in real time!" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L75-qb-0RZ">
                                 <rect key="frame" x="27" y="609" width="338" height="39"/>
                                 <constraints>
@@ -188,6 +181,13 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-Pm-7to" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="27" y="154" width="338" height="347"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loadingScreenAnim"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a3p-el-QNH"/>
                         <color key="backgroundColor" name="PennyGreen"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O13-i6-zyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="740"/>
+            <point key="canvasLocation" x="1652.6717557251907" y="739.43661971830988"/>
         </scene>
         <!--Create UserVC-->
         <scene sceneID="BWs-AD-Zmo">
@@ -387,16 +387,16 @@
             <objects>
                 <viewController storyboardIdentifier="homeScreenVC" id="dDa-Cq-14z" customClass="homeScreenVC" customModule="PebblePulse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Th9-gz-Cs2" customClass="home">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rnP-Dy-6ZG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="vjz-1w-Y3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1f-Ud-0BE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="1449"/>
+            <point key="canvasLocation" x="4121" y="1694"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="afb-3o-Hdb">
@@ -515,7 +515,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k38-7z-IP5"/>
+        <segue reference="1dK-N6-rdK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="557.66668701171875" height="557.33331298828125"/>

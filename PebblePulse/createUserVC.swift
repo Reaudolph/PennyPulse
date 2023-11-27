@@ -13,6 +13,7 @@ import CryptoKit
 import LocalAuthentication
 import AppTrackingTransparency
 import Lottie
+import FirebaseFirestore
 
 
 
@@ -20,6 +21,7 @@ import Lottie
 
 class createUserVC: UIViewController, UITextFieldDelegate {
     weak var delegate: CreateUserVCDelegate?
+    var db: Firestore! // Declare Firestore instance
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -30,6 +32,7 @@ class createUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var animViewSignUp: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
         emailField.textColor = .black
         passwordField.textColor = .black
         animViewSignUp.contentMode = .scaleAspectFit
@@ -111,6 +114,23 @@ class createUserVC: UIViewController, UITextFieldDelegate {
         registerButton.isEnabled = emailIsValid && passwordIsValid && termsAgreed
 
     }
+    func createUserObject(userId: String) {
+        // Create a reference to the user's document
+        let userRef = db.collection("users").document(userId)
+
+        // Set the initial data
+        userRef.setData([
+            "createdAt": FieldValue.serverTimestamp(),
+            // Add other user-related data if needed
+        ]) { error in
+            if let error = error {
+                print("Error creating user document: \(error)")
+            } else {
+                print("User document successfully created")
+            }
+        }
+    }
+
 
     
     func isValidEmail(_ email: String?) -> Bool {
@@ -143,6 +163,10 @@ class createUserVC: UIViewController, UITextFieldDelegate {
                        print("User created successfully")
                        self?.delegate?.userDidSignUpSuccessfully()
                        self?.dismiss(animated: true, completion: nil)
+                       if let userId = authResult?.user.uid {
+                                       self?.createUserObject(userId: userId)
+                       }
+
                    }
                }
     }
