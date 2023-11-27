@@ -47,101 +47,175 @@ class ChartViewModel: ObservableObject {
         case 1..<2: return .red
         case 2...3: return .orange
         case 3...4: return .green
-        default: return .gray
+        default: return .red
         }
     }
 }
 
 // ChartDataPoint.swift
-struct ChartDataPoint: Identifiable {
+struct ChartDataPoint: Identifiable, Equatable {
     let id = UUID()
     let date: Date
     let cost: Double
     let mood: Int
+    
+    static func == (lhs: ChartDataPoint, rhs: ChartDataPoint) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
-// ChartView.swift
+
 struct ChartView: View {
     @ObservedObject var viewModel: ChartViewModel
     
     var body: some View {
-        VStack {
-            if viewModel.dataPoints.isEmpty {
-                Text("No data available.")
-                    .padding()
-            } else {
-                Chart {
-                    ForEach(viewModel.dataPoints) { dataPoint in
-                        LineMark(
-                            x: .value("Date", dataPoint.date),
-                            y: .value("Cost", dataPoint.cost)
-                        )
-                        .foregroundStyle(.green) // Change to your preferred color
-                        .interpolationMethod(.catmullRom)
-                        .shadow(color: Color.green.opacity(0.3), radius: 8)
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            VStack {
+                if viewModel.dataPoints.isEmpty {
+                    Text("No data available.")
+                        .foregroundColor(.white)
+                        .padding()
+                } else {
+                    Chart {
+                        ForEach(viewModel.dataPoints) { dataPoint in
+                            LineMark(
+                                x: .value("Date", dataPoint.date),
+                                y: .value("Cost", dataPoint.cost)
+                            )
+                            .foregroundStyle(.green)
+                            .interpolationMethod(.catmullRom)
+                            .shadow(color: .green.opacity(0.3), radius: 8)
                         
-                        PointMark(
-                            x: .value("Date", dataPoint.date),
-                            y: .value("Cost", dataPoint.cost)
-                        )
-                        .foregroundStyle(viewModel.moodColor(mood: dataPoint.mood))
+                            PointMark(
+                                x: .value("Date", dataPoint.date),
+                                y: .value("Cost", dataPoint.cost)
+                            )
+                            .foregroundStyle(viewModel.moodColor(mood: dataPoint.mood))
+                        }
                     }
-                }
-                .background(Color.clear)
-                .chartXAxis(.hidden)
-                .chartYAxis(.hidden)
-            }
-            
-            VStack(alignment: .leading) {
-                Text("Overview")
-                    .font(.title2)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Text("This is a brief description of your spending and mood over time.")
-                    .font(.body)
-                    .foregroundColor(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                if let highest = viewModel.highestTransaction {
-                    Text("Highest Costing Transaction: \(highest.cost, specifier: "%.2f") - Mood: ")
-                        .foregroundColor(viewModel.moodColor(mood: highest.mood))
-                }
-                
-                if let lowest = viewModel.lowestTransaction {
-                    Text("Lowest Costing Transaction: \(lowest.cost, specifier: "%.2f") - Mood: ")
-                        .foregroundColor(viewModel.moodColor(mood: lowest.mood))
-                }
-                
-                Text("Average Cost: \(viewModel.averageCost, specifier: "%.2f")")
-                Text("Average Mood: \(viewModel.averageMoodDescription)")
-                    .padding([.horizontal, .top])
-                
-                HStack {
-                    Button("Resources") {
-                        // Action for Resources Button
-                    }
-                    .buttonStyle(PrimaryButtonStyle())
+                    .frame(height: 400)
                     
-                    Button("Chat") {
-                        // Action for Chat Button
-                    }
-                    .buttonStyle(PrimaryButtonStyle())
                 }
-                .padding(.bottom)
+                
+                VStack(alignment: .leading, spacing: 10) {
+                    
+                    Text("Overview")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    Text("This is a brief description of your spending and mood over time.")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                    
+                    Text("Statistics")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding(.top, 5)
+                    
+                    StatisticsView(label: "Highest Costing Transaction:", value: viewModel.highestTransaction?.cost)
+                    StatisticsView(label: "Lowest Costing Transaction:", value: viewModel.lowestTransaction?.cost)
+                    StatisticsView(label: "Average Cost:", value: viewModel.averageCost)
+                    StatisticsView(label: "Average Mood:", value: viewModel.averageMoodDescription)
+                    Spacer()
+                    CustomTabBar()
+                }
+                .padding([.horizontal, .bottom])
+                .background(RoundedRectangle(cornerRadius: 25.0).fill(Color.white.opacity(0.1)))
+                .padding(.horizontal)
+                .edgesIgnoringSafeArea(.bottom)
+                
+                 // Extend the grey box to the bottom
+                Color.clear.frame(height: 44)
             }
         }
     }
-    // Define a basic button style
-    struct PrimaryButtonStyle: ButtonStyle {
-        func makeBody(configuration: Self.Configuration) -> some View {
-            configuration.label
-                .padding()
-                .background(configuration.isPressed ? Color.blue.opacity(0.5) : Color.blue)
-                .foregroundColor(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .scaleEffect(configuration.isPressed ? 0.95 : 1)
-        }
+}
+struct CustomTabBar: View {
+    enum Tab {
+        case home
+        case chat
+        case resources
     }
     
+    @State private var selectedTab: Tab = .home
+
+    var body: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Button(action: {
+                    self.selectedTab = .home
+                }) {
+                    VStack {
+                        Image(systemName: "house.fill")
+                            .font(.title2)
+                        Text("Home")
+                            .font(.caption)
+                    }
+                    .foregroundColor(selectedTab == .home ? .purple : .gray)
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    self.selectedTab = .chat
+                }) {
+                    VStack {
+                        Image(systemName: "message.fill")
+                            .font(.title2)
+                        Text("Chat")
+                            .font(.caption)
+                    }
+                    .foregroundColor(selectedTab == .chat ? .purple : .gray)
+                }
+                
+                Spacer()
+                
+                Button(action: {
+                    self.selectedTab = .resources
+                }) {
+                    VStack {
+                        Image(systemName: "book.fill")
+                            .font(.title2)
+                        Text("Resources")
+                            .font(.caption)
+                    }
+                    .foregroundColor(selectedTab == .resources ? .purple : .gray)
+                }
+            }
+            .padding(.horizontal, 50)
+            .padding(.vertical, 5)
+            .background(Color.white.opacity(0.2))
+            .clipShape(Capsule())
+            .padding(.horizontal)
+            .padding(.bottom, 8)
+            
+            Color.clear.frame(height: 5)
+        }
+        .edgesIgnoringSafeArea(.bottom)
+    }
 }
+
+
+
+
+    
+    struct StatisticsView: View {
+        var label: String
+        var value: CustomStringConvertible?
+        
+        var body: some View {
+            HStack {
+                Text(label)
+                    .foregroundColor(.white)
+                Spacer()
+                Text(value?.description ?? "N/A")
+                    .foregroundColor(.green)
+                    .bold()
+            }
+        }
+    }
+
