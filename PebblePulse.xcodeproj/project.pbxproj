@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		62748FB04F0AAD6FFFCF0D96 /* Pods_PebblePulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF800C0EC23B803BEF818B0D /* Pods_PebblePulse.framework */; };
+		8E6F587E2B18E59A00AE6C54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F587D2B18E59A00AE6C54 /* Constants.swift */; };
+		8E6F58802B18E6D300AE6C54 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F587F2B18E6D300AE6C54 /* ChatViewController.swift */; };
+		8E6F58822B18E9AC00AE6C54 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F58812B18E9AC00AE6C54 /* Message.swift */; };
+		8E6F58852B18EDD000AE6C54 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F58832B18EDD000AE6C54 /* MessageCell.swift */; };
+		8E6F58862B18EDD000AE6C54 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6F58842B18EDD000AE6C54 /* MessageCell.xib */; };
 		8EB33F622B0B799800831DD7 /* homeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB33F612B0B799800831DD7 /* homeScreenVC.swift */; };
 		8EC554132B146A5000C70EE2 /* SpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC554122B146A5000C70EE2 /* SpendingView.swift */; };
 		8EC554152B14728300C70EE2 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC554142B14728300C70EE2 /* ChartView.swift */; };
@@ -29,6 +34,11 @@
 /* Begin PBXFileReference section */
 		3E1BFB90677A3AFD9D02D0B4 /* Pods-PebblePulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.release.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.release.xcconfig"; sourceTree = "<group>"; };
 		87A6C6CC054C4B186A771DA9 /* Pods-PebblePulse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PebblePulse.debug.xcconfig"; path = "Target Support Files/Pods-PebblePulse/Pods-PebblePulse.debug.xcconfig"; sourceTree = "<group>"; };
+		8E6F587D2B18E59A00AE6C54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8E6F587F2B18E6D300AE6C54 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8E6F58812B18E9AC00AE6C54 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8E6F58832B18EDD000AE6C54 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		8E6F58842B18EDD000AE6C54 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		8EB33F612B0B799800831DD7 /* homeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenVC.swift; sourceTree = "<group>"; };
 		8EC554122B146A5000C70EE2 /* SpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingView.swift; sourceTree = "<group>"; };
 		8EC554142B14728300C70EE2 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
@@ -108,6 +118,11 @@
 				8EB33F612B0B799800831DD7 /* homeScreenVC.swift */,
 				8EC554122B146A5000C70EE2 /* SpendingView.swift */,
 				8EC554142B14728300C70EE2 /* ChartView.swift */,
+				8E6F587D2B18E59A00AE6C54 /* Constants.swift */,
+				8E6F587F2B18E6D300AE6C54 /* ChatViewController.swift */,
+				8E6F58812B18E9AC00AE6C54 /* Message.swift */,
+				8E6F58832B18EDD000AE6C54 /* MessageCell.swift */,
+				8E6F58842B18EDD000AE6C54 /* MessageCell.xib */,
 			);
 			path = PebblePulse;
 			sourceTree = "<group>";
@@ -186,6 +201,7 @@
 				8EE4729A2B0764DA001EA710 /* moneyFalling.json in Resources */,
 				8EE472982B075BD5001EA710 /* GoogleService-Info.plist in Resources */,
 				8EE0B2B22B07A88800AB082C /* loadingScreenAnim.json in Resources */,
+				8E6F58862B18EDD000AE6C54 /* MessageCell.xib in Resources */,
 				8EE43E562B01CA72005E3C80 /* Assets.xcassets in Resources */,
 				8EE43E542B01CA6D005E3C80 /* Main.storyboard in Resources */,
 			);
@@ -242,11 +258,15 @@
 			files = (
 				8EC554132B146A5000C70EE2 /* SpendingView.swift in Sources */,
 				8EE43E4D2B01CA6D005E3C80 /* AppDelegate.swift in Sources */,
+				8E6F58802B18E6D300AE6C54 /* ChatViewController.swift in Sources */,
 				8EE4729E2B077788001EA710 /* createUserVC.swift in Sources */,
+				8E6F58852B18EDD000AE6C54 /* MessageCell.swift in Sources */,
 				8EE43E632B01E531005E3C80 /* onboardingHome.swift in Sources */,
 				8EE43E4F2B01CA6D005E3C80 /* SceneDelegate.swift in Sources */,
+				8E6F587E2B18E59A00AE6C54 /* Constants.swift in Sources */,
 				8EC554152B14728300C70EE2 /* ChartView.swift in Sources */,
 				8EE0B2AE2B07A2D100AB082C /* loginVC.swift in Sources */,
+				8E6F58822B18E9AC00AE6C54 /* Message.swift in Sources */,
 				8EE4729C2B0764F8001EA710 /* registerViewController.swift in Sources */,
 				8EB33F622B0B799800831DD7 /* homeScreenVC.swift in Sources */,
 			);

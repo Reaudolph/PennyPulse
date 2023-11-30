@@ -232,6 +232,62 @@
             </objects>
             <point key="canvasLocation" x="1652.6717557251907" y="739.43661971830988"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="vKq-yp-ki0">
+            <objects>
+                <viewController id="cwr-3P-guD" customClass="ChatViewController" customModule="PebblePulse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cug-xl-xih">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-3a-Eea">
+                                <rect key="frame" x="26" y="742" width="306" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="LdM-Lf-2ul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-on-9Ab">
+                                <rect key="frame" x="326" y="748" width="67" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="cwr-3P-guD" eventType="touchUpInside" id="sXn-wW-623"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-UL-Axs">
+                                <rect key="frame" x="26" y="103" width="344" height="619"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zjQ-AC-Uh6"/>
+                        <color key="backgroundColor" name="PennyGreen"/>
+                        <constraints>
+                            <constraint firstItem="Ec2-UL-Axs" firstAttribute="leading" secondItem="zjQ-AC-Uh6" secondAttribute="leading" constant="26" id="9yB-96-PlU"/>
+                            <constraint firstItem="zjQ-AC-Uh6" firstAttribute="trailing" secondItem="tcN-3a-Eea" secondAttribute="trailing" constant="61" id="CBP-eQ-FUk"/>
+                            <constraint firstItem="Ec2-UL-Axs" firstAttribute="top" secondItem="Cug-xl-xih" secondAttribute="topMargin" id="DQi-Vn-0YB"/>
+                            <constraint firstItem="8x2-on-9Ab" firstAttribute="trailing" secondItem="zjQ-AC-Uh6" secondAttribute="trailing" id="Rbw-vc-Dz6"/>
+                            <constraint firstItem="tcN-3a-Eea" firstAttribute="top" secondItem="Ec2-UL-Axs" secondAttribute="bottom" constant="20" id="Z2t-Zb-fCq"/>
+                            <constraint firstItem="8x2-on-9Ab" firstAttribute="leading" secondItem="zjQ-AC-Uh6" secondAttribute="leading" constant="326" id="bne-Od-Svs"/>
+                            <constraint firstItem="tcN-3a-Eea" firstAttribute="centerY" secondItem="8x2-on-9Ab" secondAttribute="centerY" id="f7x-Y3-xb5"/>
+                            <constraint firstItem="zjQ-AC-Uh6" firstAttribute="trailing" secondItem="Ec2-UL-Axs" secondAttribute="trailing" constant="23" id="kE6-zr-PJD"/>
+                            <constraint firstItem="Ec2-UL-Axs" firstAttribute="leading" secondItem="tcN-3a-Eea" secondAttribute="leading" id="qaI-Tt-aew"/>
+                            <constraint firstItem="zjQ-AC-Uh6" firstAttribute="bottom" secondItem="tcN-3a-Eea" secondAttribute="bottom" constant="29" id="tb8-oc-y8p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2u3-Vf-ReR"/>
+                    <connections>
+                        <outlet property="chatTableView" destination="Ec2-UL-Axs" id="2Wh-qB-kXn"/>
+                        <outlet property="sendTextField" destination="tcN-3a-Eea" id="VGx-8B-qEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgP-eQ-Ewe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649.6183206106869" y="1427.4647887323945"/>
+        </scene>
         <!--Create UserVC-->
         <scene sceneID="BWs-AD-Zmo">
             <objects>
@@ -387,16 +443,30 @@
             <objects>
                 <viewController storyboardIdentifier="homeScreenVC" id="dDa-Cq-14z" customClass="homeScreenVC" customModule="PebblePulse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Th9-gz-Cs2" customClass="home">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-ag-7Jg">
+                                <rect key="frame" x="28" y="783" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="cwr-3P-guD" kind="show" id="zH5-VT-yI9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rnP-Dy-6ZG"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="PennyGreen"/>
+                        <constraints>
+                            <constraint firstItem="DRE-ag-7Jg" firstAttribute="leading" secondItem="rnP-Dy-6ZG" secondAttribute="leading" constant="28" id="vcm-Ig-dQX"/>
+                            <constraint firstItem="DRE-ag-7Jg" firstAttribute="bottom" secondItem="rnP-Dy-6ZG" secondAttribute="bottom" id="yvg-O6-XFu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vjz-1w-Y3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1f-Ud-0BE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4121" y="1694"/>
+            <point key="canvasLocation" x="4373" y="739"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="afb-3o-Hdb">
@@ -515,17 +585,21 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1dK-N6-rdK"/>
+        <segue reference="k38-7z-IP5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="557.66668701171875" height="557.33331298828125"/>
         <image name="mail.stack.fill" catalog="system" width="126" height="128"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="rectangle.portrait.and.arrow.forward.fill" catalog="system" width="128" height="108"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="xmark.app.fill" catalog="system" width="128" height="114"/>
         <namedColor name="PennyGreen">
             <color red="0.59600001573562622" green="0.97299998998641968" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

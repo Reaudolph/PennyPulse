@@ -70,7 +70,8 @@ struct ChartView: View {
     
     var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color.white // Set the background color of the chart to white
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 if viewModel.dataPoints.isEmpty {
                     Text("No data available.")
@@ -86,7 +87,7 @@ struct ChartView: View {
                             .foregroundStyle(.green)
                             .interpolationMethod(.catmullRom)
                             .shadow(color: .green.opacity(0.3), radius: 8)
-                        
+                            
                             PointMark(
                                 x: .value("Date", dataPoint.date),
                                 y: .value("Cost", dataPoint.cost)
@@ -99,36 +100,46 @@ struct ChartView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    
+                    Spacer(minLength: 5)
                     Text("Overview")
                         .font(.title2)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
+                        .padding(.bottom, 5) // Add bottom padding
+                        .padding(.horizontal) // Add horizontal padding
                     
                     Text("This is a brief description of your spending and mood over time.")
                         .font(.body)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.black)
+                        .padding(.horizontal) // Add horizontal padding
                     
                     Text("Statistics")
                         .font(.title3)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .padding(.top, 5)
+                        .padding(.horizontal) // Add horizontal padding
                     
+                    // Use white foreground color for green text
                     StatisticsView(label: "Highest Costing Transaction:", value: viewModel.highestTransaction?.cost)
-                    StatisticsView(label: "Lowest Costing Transaction:", value: viewModel.lowestTransaction?.cost)
-                    StatisticsView(label: "Average Cost:", value: viewModel.averageCost)
+                        .foregroundColor(.black)
+                        .padding(.horizontal) // Add horizontal padding
+                    StatisticsView(label: "Lowest Costing Transaction:", value: String(format: "%.2f", viewModel.lowestTransaction?.cost ?? 0.0))
+                        .foregroundColor(.black)
+                        .padding(.horizontal) // Add horizontal padding
+                    StatisticsView(label: "Average Cost:", value: String(format: "%.2f", viewModel.averageCost))
+                        .foregroundColor(.black)
+                        .padding(.horizontal) // Add horizontal padding
                     StatisticsView(label: "Average Mood:", value: viewModel.averageMoodDescription)
+                        .foregroundColor(.black)
+                        .padding(.horizontal) // Add horizontal padding
                     Spacer()
-                    CustomTabBar()
                 }
-                .padding([.horizontal, .bottom])
-                .background(RoundedRectangle(cornerRadius: 25.0).fill(Color.white.opacity(0.1)))
-                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
+                .background(RoundedRectangle(cornerRadius: 0)
+                    .fill(Color.pennyGreen) // Set the background color of the overview stats box to green
+                    .opacity(1)) // Set the opacity as needed
                 .edgesIgnoringSafeArea(.bottom)
-                
-                 // Extend the grey box to the bottom
-                Color.clear.frame(height: 44)
             }
         }
     }
@@ -141,7 +152,7 @@ struct CustomTabBar: View {
     }
     
     @State private var selectedTab: Tab = .home
-
+    
     var body: some View {
         VStack {
             Spacer()
@@ -202,20 +213,20 @@ struct CustomTabBar: View {
 
 
 
+
+struct StatisticsView: View {
+    var label: String
+    var value: CustomStringConvertible?
     
-    struct StatisticsView: View {
-        var label: String
-        var value: CustomStringConvertible?
-        
-        var body: some View {
-            HStack {
-                Text(label)
-                    .foregroundColor(.white)
-                Spacer()
-                Text(value?.description ?? "N/A")
-                    .foregroundColor(.green)
-                    .bold()
-            }
+    var body: some View {
+        HStack {
+            Text(label)
+                .foregroundColor(.black)
+            Spacer()
+            Text(value?.description ?? "N/A")
+                .foregroundColor(.black)
+                .bold()
         }
     }
+}
 
