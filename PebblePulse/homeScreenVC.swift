@@ -35,11 +35,13 @@ class homeScreenVC: UIViewController {
         hostingController.didMove(toParent: self)
         
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        let bottomMargin: CGFloat = 100  // Adjust this value to leave the desired space at the bottom
+        
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor) // Set bottom constraint to make it take up the entire screen
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomMargin) // Adjusted bottom constraint
         ])
     }
 
