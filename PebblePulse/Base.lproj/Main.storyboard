@@ -462,50 +462,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-ag-7Jg">
-                                <rect key="frame" x="0.0" y="753" width="130" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-ag-7Jg">
+                                <rect key="frame" x="0.0" y="756.33333333333337" width="130" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="C8M-c8-XRU"/>
+                                    <constraint firstAttribute="height" constant="96" id="TfA-7j-IJY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Chat">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="cwr-3P-guD" kind="show" id="zH5-VT-yI9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-rp-J1q">
-                                <rect key="frame" x="266" y="753" width="127" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-rp-J1q">
+                                <rect key="frame" x="264" y="757" width="129" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="127" id="OQ2-8Q-J7X"/>
+                                    <constraint firstAttribute="height" constant="98" id="Kh3-Od-L5p"/>
+                                    <constraint firstAttribute="width" constant="129" id="OQ2-8Q-J7X"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Help">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="LXZ-CA-20a" kind="show" id="x8A-cv-3f1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8h-nb-Yci">
-                                <rect key="frame" x="142.66666666666666" y="753" width="108" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8h-nb-Yci">
+                                <rect key="frame" x="122" y="756.33333333333337" width="148" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="6TD-Jj-iuO"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Home">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnP-Dy-6ZG"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="PennyGreen"/>
                         <constraints>
                             <constraint firstItem="DRE-ag-7Jg" firstAttribute="leading" secondItem="rnP-Dy-6ZG" secondAttribute="leading" id="7pL-Zb-y1l"/>
-                            <constraint firstItem="Y8h-nb-Yci" firstAttribute="leading" secondItem="DRE-ag-7Jg" secondAttribute="trailing" constant="12.666666666666657" id="8hg-nK-441"/>
-                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="Y8h-nb-Yci" secondAttribute="baseline" id="FuJ-rz-cKa"/>
-                            <constraint firstItem="w7o-rp-J1q" firstAttribute="leading" secondItem="Y8h-nb-Yci" secondAttribute="trailing" constant="15.333333333333343" id="HJJ-DN-Kxh"/>
-                            <constraint firstItem="w7o-rp-J1q" firstAttribute="bottom" secondItem="rnP-Dy-6ZG" secondAttribute="bottom" id="LrQ-nA-uJp"/>
+                            <constraint firstItem="Y8h-nb-Yci" firstAttribute="leading" secondItem="DRE-ag-7Jg" secondAttribute="trailing" constant="-8" id="8hg-nK-441"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="Y8h-nb-Yci" secondAttribute="baseline" constant="1.6666666666666288" id="FuJ-rz-cKa"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="leading" secondItem="Y8h-nb-Yci" secondAttribute="trailing" constant="-6" id="HJJ-DN-Kxh"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="bottom" secondItem="rnP-Dy-6ZG" secondAttribute="bottom" constant="37" id="LrQ-nA-uJp"/>
                             <constraint firstAttribute="trailing" secondItem="w7o-rp-J1q" secondAttribute="trailing" id="W5t-3E-Zk4"/>
-                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="DRE-ag-7Jg" secondAttribute="baseline" id="uuP-Fg-9WV"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="DRE-ag-7Jg" secondAttribute="baseline" constant="1.6666666666666288" id="uuP-Fg-9WV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vjz-1w-Y3Z"/>

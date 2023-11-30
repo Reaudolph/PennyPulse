@@ -70,12 +70,12 @@ struct ChartView: View {
     
     var body: some View {
         ZStack {
-            Color.white // Set the background color of the chart to white
+            Color.pennyGreen // Set the background color of the chart to white
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 if viewModel.dataPoints.isEmpty {
                     Text("No data available.")
-                        .foregroundColor(.white)
+                        .foregroundColor(.pennyGreen)
                         .padding()
                 } else {
                     Chart {
@@ -84,7 +84,7 @@ struct ChartView: View {
                                 x: .value("Date", dataPoint.date),
                                 y: .value("Cost", dataPoint.cost)
                             )
-                            .foregroundStyle(.green)
+                            .foregroundStyle(.black)
                             .interpolationMethod(.catmullRom)
                             .shadow(color: .green.opacity(0.3), radius: 8)
                             
@@ -136,7 +136,7 @@ struct ChartView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .background(RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.white)
+                    .fill(Color.pennyGreen)
                     .opacity(1))
                 .edgesIgnoringSafeArea(.bottom)
             }

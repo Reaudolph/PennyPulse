@@ -6,11 +6,9 @@
     //
 
 
+
 import UIKit
 import Foundation
-
-
-import UIKit
 
 struct GridItem {
     let imageName: String
@@ -35,9 +33,7 @@ class GridCell: UICollectionViewCell {
     }
 }
 
-
 class ResourceHubVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    var homeBar: UIView!
 
     var collectionView: UICollectionView!
     var gridItems: [GridItem] = [
@@ -59,12 +55,13 @@ class ResourceHubVC: UIViewController, UICollectionViewDataSource, UICollectionV
         GridItem(imageName: "image4", webURL: URL(string: "https://example.com")!),
         GridItem(imageName: "image5", webURL: URL(string: "https://example.com")!),
         GridItem(imageName: "image6", webURL: URL(string: "https://example.com")!),
-
     ]
+    var homeBar: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupHomeBar()
     }
 
     func setupCollectionView() {
@@ -113,6 +110,7 @@ class ResourceHubVC: UIViewController, UICollectionViewDataSource, UICollectionV
         let item = gridItems[indexPath.row]
         UIApplication.shared.open(item.webURL)
     }
+
     func setupHomeBar() {
         homeBar = UIView()
         homeBar.translatesAutoresizingMaskIntoConstraints = false
@@ -150,6 +148,21 @@ class ResourceHubVC: UIViewController, UICollectionViewDataSource, UICollectionV
         ])
     }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return gridItems.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCell", for: indexPath) as! GridCell
+        let item = gridItems[indexPath.row]
+        cell.imageView.image = UIImage(named: item.imageName)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = gridItems[indexPath.row]
+        UIApplication.shared.open(item.webURL)
+    }
+
+ 
 }
-
-
