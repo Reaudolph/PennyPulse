@@ -90,11 +90,18 @@ extension ChatViewController : UITableViewDataSource {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageCell
         cell.messageLabel?.text = messages[indexPath.row].body
         return cell
+        
     }
-    
-    
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Adjust this value to set the desired spacing between cells
+        return 55
+        
+        
+        
+    }
 }
+    
+    
 extension ChatViewController : UITableViewDelegate {
     
     

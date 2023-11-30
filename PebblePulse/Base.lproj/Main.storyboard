@@ -286,7 +286,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgP-eQ-Ewe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649.6183206106869" y="1427.4647887323945"/>
+            <point key="canvasLocation" x="5257" y="739"/>
+        </scene>
+        <!--Resource HubVC-->
+        <scene sceneID="dhM-a8-Jua">
+            <objects>
+                <viewController id="LXZ-CA-20a" customClass="ResourceHubVC" customModule="PebblePulse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xwg-4G-fJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FLh-tW-efm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZvV-Hs-61I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4h-Zw-bSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6106" y="762"/>
         </scene>
         <!--Create UserVC-->
         <scene sceneID="BWs-AD-Zmo">
@@ -446,27 +462,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-ag-7Jg">
-                                <rect key="frame" x="28" y="783" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRE-ag-7Jg">
+                                <rect key="frame" x="0.0" y="753" width="130" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="C8M-c8-XRU"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Chat">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="cwr-3P-guD" kind="show" id="zH5-VT-yI9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-rp-J1q">
+                                <rect key="frame" x="266" y="753" width="127" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="OQ2-8Q-J7X"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Help">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="LXZ-CA-20a" kind="show" id="x8A-cv-3f1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8h-nb-Yci">
+                                <rect key="frame" x="142.66666666666666" y="753" width="108" height="65"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rnP-Dy-6ZG"/>
-                        <color key="backgroundColor" name="PennyGreen"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DRE-ag-7Jg" firstAttribute="leading" secondItem="rnP-Dy-6ZG" secondAttribute="leading" constant="28" id="vcm-Ig-dQX"/>
-                            <constraint firstItem="DRE-ag-7Jg" firstAttribute="bottom" secondItem="rnP-Dy-6ZG" secondAttribute="bottom" id="yvg-O6-XFu"/>
+                            <constraint firstItem="DRE-ag-7Jg" firstAttribute="leading" secondItem="rnP-Dy-6ZG" secondAttribute="leading" id="7pL-Zb-y1l"/>
+                            <constraint firstItem="Y8h-nb-Yci" firstAttribute="leading" secondItem="DRE-ag-7Jg" secondAttribute="trailing" constant="12.666666666666657" id="8hg-nK-441"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="Y8h-nb-Yci" secondAttribute="baseline" id="FuJ-rz-cKa"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="leading" secondItem="Y8h-nb-Yci" secondAttribute="trailing" constant="15.333333333333343" id="HJJ-DN-Kxh"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="bottom" secondItem="rnP-Dy-6ZG" secondAttribute="bottom" id="LrQ-nA-uJp"/>
+                            <constraint firstAttribute="trailing" secondItem="w7o-rp-J1q" secondAttribute="trailing" id="W5t-3E-Zk4"/>
+                            <constraint firstItem="w7o-rp-J1q" firstAttribute="baseline" secondItem="DRE-ag-7Jg" secondAttribute="baseline" id="uuP-Fg-9WV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vjz-1w-Y3Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1f-Ud-0BE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4373" y="739"/>
+            <point key="canvasLocation" x="4371.7557251908393" y="738.73239436619724"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="afb-3o-Hdb">

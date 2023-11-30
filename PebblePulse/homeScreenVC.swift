@@ -68,7 +68,7 @@ class homeScreenVC: UIViewController {
                 for document in documents {
                     let data = document.data()
                     if let cost = data["cost"] as? Double,
-                       let mood = data["mood"] as? Int, // Make sure to fetch the mood from the document
+                       let mood = data["mood"] as? Int, 
                        let timestamp = data["timeHappened"] as? Timestamp {
                         let date = timestamp.dateValue()
                         let dataPoint = ChartDataPoint(date: date, cost: cost, mood: mood)

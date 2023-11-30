@@ -105,40 +105,39 @@ struct ChartView: View {
                         .font(.title2)
                         .bold()
                         .foregroundColor(.black)
-                        .padding(.bottom, 5) // Add bottom padding
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.bottom, 5)
+                        .padding(.horizontal)
                     
                     Text("This is a brief description of your spending and mood over time.")
                         .font(.body)
                         .foregroundColor(.black)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     
                     Text("Statistics")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.black)
                         .padding(.top, 5)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     
-                    // Use white foreground color for green text
                     StatisticsView(label: "Highest Costing Transaction:", value: viewModel.highestTransaction?.cost)
                         .foregroundColor(.black)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     StatisticsView(label: "Lowest Costing Transaction:", value: String(format: "%.2f", viewModel.lowestTransaction?.cost ?? 0.0))
                         .foregroundColor(.black)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     StatisticsView(label: "Average Cost:", value: String(format: "%.2f", viewModel.averageCost))
                         .foregroundColor(.black)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     StatisticsView(label: "Average Mood:", value: viewModel.averageMoodDescription)
                         .foregroundColor(.black)
-                        .padding(.horizontal) // Add horizontal padding
+                        .padding(.horizontal)
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .background(RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.pennyGreen) // Set the background color of the overview stats box to green
-                    .opacity(1)) // Set the opacity as needed
+                    .fill(Color.white)
+                    .opacity(1))
                 .edgesIgnoringSafeArea(.bottom)
             }
         }
