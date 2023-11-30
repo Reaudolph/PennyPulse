@@ -241,15 +241,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-3a-Eea">
-                                <rect key="frame" x="26" y="742" width="306" height="47"/>
+                                <rect key="frame" x="26" y="742" width="292" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="LdM-Lf-2ul"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-UL-Axs">
+                                <rect key="frame" x="26" y="103" width="344" height="619"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-on-9Ab">
-                                <rect key="frame" x="326" y="748" width="67" height="35"/>
+                                <rect key="frame" x="337" y="748" width="40" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system">
                                     <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -258,20 +262,16 @@
                                     <action selector="sendButtonPressed:" destination="cwr-3P-guD" eventType="touchUpInside" id="sXn-wW-623"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ec2-UL-Axs">
-                                <rect key="frame" x="26" y="103" width="344" height="619"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zjQ-AC-Uh6"/>
                         <color key="backgroundColor" name="PennyGreen"/>
                         <constraints>
                             <constraint firstItem="Ec2-UL-Axs" firstAttribute="leading" secondItem="zjQ-AC-Uh6" secondAttribute="leading" constant="26" id="9yB-96-PlU"/>
-                            <constraint firstItem="zjQ-AC-Uh6" firstAttribute="trailing" secondItem="tcN-3a-Eea" secondAttribute="trailing" constant="61" id="CBP-eQ-FUk"/>
+                            <constraint firstItem="zjQ-AC-Uh6" firstAttribute="trailing" secondItem="tcN-3a-Eea" secondAttribute="trailing" constant="75" id="CBP-eQ-FUk"/>
                             <constraint firstItem="Ec2-UL-Axs" firstAttribute="top" secondItem="Cug-xl-xih" secondAttribute="topMargin" id="DQi-Vn-0YB"/>
-                            <constraint firstItem="8x2-on-9Ab" firstAttribute="trailing" secondItem="zjQ-AC-Uh6" secondAttribute="trailing" id="Rbw-vc-Dz6"/>
+                            <constraint firstItem="8x2-on-9Ab" firstAttribute="trailing" secondItem="zjQ-AC-Uh6" secondAttribute="trailing" constant="-16" id="Rbw-vc-Dz6"/>
                             <constraint firstItem="tcN-3a-Eea" firstAttribute="top" secondItem="Ec2-UL-Axs" secondAttribute="bottom" constant="20" id="Z2t-Zb-fCq"/>
-                            <constraint firstItem="8x2-on-9Ab" firstAttribute="leading" secondItem="zjQ-AC-Uh6" secondAttribute="leading" constant="326" id="bne-Od-Svs"/>
+                            <constraint firstItem="8x2-on-9Ab" firstAttribute="leading" secondItem="zjQ-AC-Uh6" secondAttribute="leading" constant="337" id="bne-Od-Svs"/>
                             <constraint firstItem="tcN-3a-Eea" firstAttribute="centerY" secondItem="8x2-on-9Ab" secondAttribute="centerY" id="f7x-Y3-xb5"/>
                             <constraint firstItem="zjQ-AC-Uh6" firstAttribute="trailing" secondItem="Ec2-UL-Axs" secondAttribute="trailing" constant="23" id="kE6-zr-PJD"/>
                             <constraint firstItem="Ec2-UL-Axs" firstAttribute="leading" secondItem="tcN-3a-Eea" secondAttribute="leading" id="qaI-Tt-aew"/>

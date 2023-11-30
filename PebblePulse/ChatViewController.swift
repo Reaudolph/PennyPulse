@@ -17,9 +17,7 @@ class ChatViewController : UIViewController {
     @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var chatTableView: UITableView!
     var messages: [Message] = [
-        Message(sender: "Rishi", body: "Yoo"),
-        Message(sender: "Lauren", body: "WSG"),
-        Message(sender: "EJ", body: "Not much")
+       
     ]
     
     var db = Firestore.firestore()
@@ -31,13 +29,15 @@ class ChatViewController : UIViewController {
         self.navigationItem.hidesBackButton
         
         chatTableView.register(UINib(nibName: "MessageCell", bundle:nil), forCellReuseIdentifier: "ReusableCell")
+        loadMessages()
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         if let messageBody = sendTextField.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection("messages").addDocument(data: [
                 "sender" : messageSender,
-                "body" : messageBody
+                "body" : messageBody,
+                "date" : Date().timeIntervalSince1970
             ]) { error in
                 if let e = error {
                     print("ZE BLUECHEWS DEVISHE IS READY TO PAAIH, \(e)")
@@ -47,6 +47,35 @@ class ChatViewController : UIViewController {
             }
         }
     }
+    
+    func loadMessages() {
+        
+        db.collection("messages").order(by: "date").addSnapshotListener { QuerySnapshot, error in
+            self.messages = []
+
+            if let e = error {
+                print("issue retriving stuff \(e)")
+            }
+            else {
+                if let snapShot = QuerySnapshot?.documents {
+                    for doc in snapShot {
+                        let data = doc.data()
+                        if let sender = data["sender"] as? String, let messageBody = data["body"] as? String {
+                            let newMessage = Message(sender: sender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.chatTableView.reloadData()
+                            }
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     
 
 }
