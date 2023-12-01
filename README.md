@@ -13,7 +13,7 @@
     emotional response recording. The manual also includes troubleshooting tips, frequently asked
     questions, and contact information for additional support.
 # 1.3 Points of Contact
-    For any assistance, PennyPulse’s customer as in (1 person -_-) support team is available to
+    For any assistance, PennyPulse’s customer as support team is available to
     help. Users can contact the help desk via:
     ● hrishivik@gmail.com
 # 1.4 Project References
